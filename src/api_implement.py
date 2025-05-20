@@ -1,4 +1,3 @@
-
 '''
 This function returns the basic movie information (Title, Release Date, Overview, Language, Average Rating) from the TMDb API for the list of highest-grossing films.
 '''
@@ -50,3 +49,4 @@ def movie_info(title):
 movie_api_data = [movie_info(title) for title in titles]
 
 api_df = pd.DataFrame(movie_api_data)
+
