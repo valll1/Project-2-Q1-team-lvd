@@ -1,4 +1,3 @@
-
 ''' This function takes a url as a parameter and scrapes through its desired table,
     retrieving and storing all 50 movie titles into a single data frame.'''
 
@@ -26,6 +25,3 @@ def web_scrape(url):
   # Creates and stores data in movie_df dataframe
   movie_df = pd.DataFrame(data)
   return movie_df # Returns dataframe
-
-
-
