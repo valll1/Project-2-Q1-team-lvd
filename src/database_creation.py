@@ -1,3 +1,7 @@
+#import libraries
+import sqlite3
+import pandas as pd
+
 def combine_dataframe(movie_df, api_df):
     #combine the movie_df and api_df into a combined dataframe using the join method
     combined_df = movie_df.join(api_df)
@@ -12,9 +16,6 @@ def combine_dataframe(movie_df, api_df):
     #output data as csv file
     combined_df.to_csv('highest_grossing_films.csv', index=False)
 
-#import libraries
-import sqlite3
-import pandas as pd
 
 def create_table(): #create table function
     #create database
@@ -49,3 +50,4 @@ def create_table(): #create table function
     #close database
     db_conn.close()
     
+
