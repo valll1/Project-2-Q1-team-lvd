@@ -48,3 +48,4 @@ def create_table(): #create table function
 
     #close database
     db_conn.close()
+    
