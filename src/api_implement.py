@@ -1,6 +1,15 @@
 '''
 This function returns the basic movie information (Title, Release Date, Overview, Language, Average Rating) from the TMDb API for the list of highest-grossing films.
 '''
+#import libraries
+from dotenv import load_dotenv
+import os
+import requests
+
+#
+load_dotenv()
+TMDB_API_KEY = os.getenv("TMDB_API_KEY")
+api_url = os.getenv('api_url')
 
 def movie_info(title):
 
@@ -45,9 +54,9 @@ def movie_info(title):
         'Title': title, 'Error': f'Error: {query_response.status_code}: {query_response.text}'
     }
 
-# Movie data is collected through list comprehension
-movie_api_data = [movie_info(title) for title in titles]
+#Movie data is collected through list comprehension
+#movie_api_data = [movie_info(title) for title in titles]
 
-api_df = pd.DataFrame(movie_api_data)
+#api_df = pd.DataFrame(movie_api_data)
 
 

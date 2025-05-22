@@ -1,5 +1,9 @@
 ''' This function takes a url as a parameter and scrapes through its desired table,
     retrieving and storing all 50 movie titles into a single data frame.'''
+#import libraries
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
 
 def web_scrape(url):
   page = requests.get(url) # Makes requests to the url
