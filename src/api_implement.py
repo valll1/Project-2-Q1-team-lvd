@@ -50,3 +50,4 @@ movie_api_data = [movie_info(title) for title in titles]
 
 api_df = pd.DataFrame(movie_api_data)
 
+
